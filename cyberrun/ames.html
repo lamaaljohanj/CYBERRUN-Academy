@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CYBERRUN GAMES</title>
+  <!--الخطوط-->
+  <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="games.css">
+</head>
+
+<body>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+<header class="header">
+  <div class="container">
+    <h1 class="logo">CYBERRUN</h1>
+     <nav class="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="academy.html">Academy</a></li>
+          <li><a href="games.html">Games</a></li>
+          <li><a href="Tools.html">Tools</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="quiz-container">
+    <h1>CYBERRUN GAMES</h1>
+    <div class="progress-bar-container">
+      <div class="progress-bar" id="progress-bar"></div>
+    </div>
+    <div class="progress-text" id="progress-text">Question 0 of 5</div>
+    <button id="start-btn">Start Game</button>
+
+ 
+    <div class="question-card" id="question-1">
+      <h3>Crypto</h3>
+       <p>
+        The following text is encoded<br />
+        <code>Q3liZXJSdW4gaXMgdGhlIGJlc3Q=</code><br /><br />
+        Decode it and type the original message
+      </p>
+
+      <input type="text" id="q1-answer" placeholder="Type the decoded text here..." />
+
+      <div class="hint-message" id="q1-hint">
+        Hint:
+        <a href="https://gchq.github.io/CyberChef/" target="_blank">CyberChef tool</a>
+      </div>
+
+<p class="feedback" id="q1-feedback"></p>
+
+      <div class="button-group">
+        <button class="btn hint-btn" data-q="1">Hint</button>
+        <button class="btn skip-btn" data-q="1">Skip</button>
+        <button class="btn submit-btn" data-q="1">Submit</button>
+      </div>
+    </div>
+
+
+    <div class="question-card" id="question-2">
+      <h3>Phishing Detection</h3>
+      <p>
+        You intercepted the email shown below.<br />
+        Select the <strong>two strongest signs</strong> that this email is a phishing attempt.
+      </p>
+
+      <img src="https://i.postimg.cc/cCjBd15N/email-png.png" alt="Suspicious email" class="email-image" />
+
+      <div class="checkbox-list">
+        <label class="checkbox-item">
+          <input type="checkbox" name="q2-sign" value="domain" />
+          The sender domain is not an official company domain.
+        </label>
+
+        <label class="checkbox-item">
+          <input type="checkbox" name="q2-sign" value="tone" />
+          The email uses a friendly, casual tone only.
+        </label>
+
+        <label class="checkbox-item">
+          <input type="checkbox" name="q2-sign" value="link" />
+          The verification link does not go to the real website.
+        </label>
+
+        <label class="checkbox-item">
+          <input type="checkbox" name="q2-sign" value="typo" />
+          There is a small spelling mistake in the subject.
+        </label>
+      </div>
+
+      <div class="hint-message" id="q2-hint">
+        Hint: Focus on the real domain and where the link actually goes.
+      </div>
+
+      <p class="feedback" id="q2-feedback"></p>
+      <div class="button-group">
+        <button class="btn hint-btn" data-q="2">Hint</button>
+        <button class="btn skip-btn" data-q="2">Skip</button>
+        <button class="btn submit-btn" data-q="2">Submit</button>
+      </div>
+    </div>
+
+
+    <div class="question-card" id="question-3">
+      <h3>Web Password</h3>
+      <p>
+        There is a separate web challenge page with a simple password page.<br />
+        Your goal is to find the <strong>secret password</strong> that makes the page show:<br />
+        <code>Correct password! Access granted.</code><br /><br />
+        Open the external page using the link below, solve it, then type the exact password you found.
+      </p>
+
+      <p style="font-size: 0.85rem; opacity: 0.8; margin-bottom: 8px;">
+        External challenge link:<br />
+        <a href="https://codepen.io/starcipher777/pen/EaKEMqN" target="_blank">
+          Open the Password Challenge
+        </a>
+      </p>
+
+      <input type="text" id="q3-answer" placeholder="Type the secret password here..." />
+
+      <div class="hint-message" id="q3-hint">
+        Hint: View the source code and you will find it.
+      </div>
+
+      <p class="feedback" id="q3-feedback"></p>
+
+      <div class="button-group">
+        <button class="btn hint-btn" data-q="3">Hint</button>
+        <button class="btn skip-btn" data-q="3">Skip</button>
+        <button class="btn submit-btn" data-q="3">Submit</button>
+      </div>
+    </div>
+
+
+    <div class="question-card" id="question-4">
+      <h3>The Escaping Button</h3>
+      <p>
+        Try to click the button below.<br />
+        But be careful... it will <strong>run away</strong> whenever you get close!
+      </p>
+
+      <div style="position: relative; height: 150px;">
+        <button id="escape-btn" style="
+          position: absolute;
+          padding: 10px 20px;
+          border-radius: 25px;
+          background: linear-gradient(90deg,#d43f8d,#b43b9d);
+          color: white;
+          border: none;
+          font-weight: 600;
+          cursor: pointer;
+        ">
+          click me!
+        </button>
+      </div>
+
+      <input type="text" id="q4-answer" placeholder="Type the secret word..." />
+
+      <div class="hint-message" id="q4-hint">
+        Hint: look for a function that is hidden at the bottom of the JavaScript code
+      </div>
+
+      <p class="feedback" id="q4-feedback"></p>
+
+      <div class="button-group">
+        <button class="btn hint-btn" data-q="4">Hint</button>
+        <button class="btn skip-btn" data-q="4">Skip</button>
+        <button class="btn submit-btn" data-q="4">Submit</button>
+      </div>
+    </div>
+
+
+    <div class="question-card" id="question-5">
+      <h3>Forensics</h3>
+
+      <p>
+        Stegnography is a great way to hide information.
+        Save this image and extract the answer.<br />
+        <img
+          src="https://raw.githubusercontent.com/lamaaljohanj/Cyberrun/refs/heads/main/stegQ5.png"
+          class="stego-image"
+          alt="steg-Q5"
+        />
+        This is a TWO steps process.
+      </p>
+
+      <input type="text" id="q5-answer" placeholder="Type the answer" />
+
+      <div class="hint-message" id="q5-hint">
+        Hint: extract using
+        <a href="https://stylesuxx.github.io/steganography/" target="_blank">Steganography tool</a>,
+        then decrypt the HEX using
+        <a href="https://gchq.github.io/CyberChef/" target="_blank">CyberChef tool</a>
+      </div>
+
+      <p class="feedback" id="q5-feedback"></p>
+
+      <div class="button-group">
+        <button class="btn hint-btn" data-q="5">Hint</button>
+        <button class="btn skip-btn" data-q="5">Skip</button>
+        <button class="btn submit-btn" data-q="5">Submit</button>
+      </div>
+    </div>
+
+    <div id="results-card">
+      <p class="score-text" id="score-text"></p>
+      <p id="score-detail"></p>
+
+      <div class="results-buttons">
+        <button id="restart-btn">Play Again</button>
+        <a href="index.html" class="back-home-btn">⬅ Back to Home</a>
+      </div>
+    </div>
+  </div>
+  <script src="games.js"></script>
+</body>
+</html>
