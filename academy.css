@@ -1,0 +1,64 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #12121e; 
+    color: #E0E0F0;
+}
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.attack-card-main {
+    box-shadow: 0 0 30px rgba(255, 100, 100, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+.attack-card-main:hover {
+    transform: translateY(-4px);
+}
+
+.logo {
+    font-family: 'Press Start 2P', system-ui;
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 0 10px #8a2be2;
+    letter-spacing: 2px;
+}
+
+.collapsible-content {
+   
+    transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+    max-height: 0; 
+    overflow: hidden; 
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 1.5rem; 
+    padding-right: 1.5rem;
+}
+.collapsible-content.expanded {
+    max-height: 5000px; 
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+
+/*  scrolling ONLY for attack content*/
+.attacks-grid .collapsible-content.expanded {
+    overflow-y: auto; 
+    max-height: 5000px;
+}
+
+
+.intro-card:hover {
+    border-color: #5A189A;
+    box-shadow: 0 0 15px #5A189A;
+}
+
+.scenario-item-main {
+    transition: transform 0.3s ease-in-out;
+}
+.scenario-item-main:hover {
+    transform: translateY(-4px);
+}
